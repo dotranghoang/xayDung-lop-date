@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myDate =function(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function() {
+                return this.day;
+            }
+            this.getMonth = function() {
+                return this.month;
+            }
+            this.getYear = function() {
+                return this.year;
+            }
+            this.setDay = function(day) {
+                this.day = day;
+            }
+            this.setMonth = function(month) {
+                this.month = month;
+            }
+            this.setYear = function(year) {
+                this.year = year;
+            }
+        };
+        let date = new myDate(2,2,2007);// tạo đối tượng date có lớp là myDate
+        let day = date.getDay();//các biến lây giá trị từ đối tượng date(đối tượng date có các giá trị và phương thức của lớp Mydate)
+        let month = date.getMonth();
+        let year = date.getYear();
+        alert(day + "/" + month + "/" + year);
+        date.setDay(10);   // thiết lập lại giá trị trong đối tượng date.
+        date.setMonth(10);
+        date.setYear(2019);
+        let day1 = date.getDay();
+        let month1 = date.getMonth();
+        let year1 = date.getYear();
+        alert(day1 + "/" + month1 + "/" + year1);
+
+    </script>
+</body>
+
+</html>
